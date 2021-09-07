@@ -1,0 +1,106 @@
+html,
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #f8f8f8;
+}
+
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+.logo i {
+  color: tomato;
+}
+
+.logo {
+  font-size: 1rem;
+}
+
+.nav {
+  display: flex;
+  background-color: indigo;
+  color: whitesmoke;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+}
+
+.menu li {
+  padding: 0 12px;
+}
+
+.menu li:hover {
+  background-color: aquamarine;
+  border-radius: 4px;
+}
+
+.snsicon {
+  display: flex;
+  padding-right: 30px;
+}
+
+.snsicon li {
+  padding: 0 8px;
+  font-size: 1.2rem;
+}
+
+.menubar {
+  display: none;
+}
+
+@media screen and (max-width: 840px) {
+  .nav {
+    flex-direction: column;
+    align-content: center;
+  }
+
+  .logo {
+    align-self: flex-start;
+  }
+
+  .logo h1 {
+    margin: 0;
+  }
+
+  .menubar {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 24px;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin: 10px;
+  }
+
+  .menu li {
+    width: 100%;
+    padding: 6px;
+    text-align: center;
+  }
+
+  .snsicon {
+    display: none;
+    padding: 0;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .menu.active,
+  .snsicon.active {
+    display: flex;
+  }
+}
