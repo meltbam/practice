@@ -1,106 +1,239 @@
+* {
+  box-sizing: border-box;
+}
+
 html,
 body {
   margin: 0;
 }
 
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 1rem;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+
 a {
   text-decoration: none;
-  color: #f8f8f8;
 }
 
 ul {
-  padding-left: 0;
   list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  background-color: #0f0f00;
+}
+
+.navbar a {
+  color: whitesmoke;
+}
+
+.navbar h1 {
+  font-size: 1.2rem;
+  color: whitesmoke;
+  font-weight: 600;
 }
 
 .logo i {
-  color: tomato;
+  color: red;
 }
 
-.logo {
-  font-size: 1rem;
-}
-
-.nav {
+.navmenu {
   display: flex;
-  background-color: indigo;
-  color: whitesmoke;
+}
+
+.navmenu li {
+  margin-right: 5px;
+}
+
+.about {
+  padding: 4px 12px;
+}
+
+.titles {
+  margin-bottom: 5px;
+}
+
+.tags {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.tags li {
+  margin-right: 3px;
+}
+
+.tags a {
+  color: steelblue;
+}
+
+.title {
+  font-size: 1.1rem;
+  margin-bottom: 3px;
+}
+
+.view {
+  font-size: 0.5rem;
+  color: gray;
+}
+
+.video iframe {
+  box-sizing: content-box;
+  width: 100%;
+  height: 30vh;
+}
+.videomenubar {
+  display: flex;
+  justify-content: space-around;
   align-items: center;
-  justify-content: space-between;
-  padding: 12px 24px;
+  height: 6vh;
+  border-bottom: whitesmoke solid 1px;
+  margin-bottom: 6px;
 }
 
-.menu {
+.videomenubar li {
   display: flex;
-  list-style: none;
+  color: dimgray;
+  flex-direction: column;
+  flex-basis: 20%;
+  height: 100%;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
-.menu li {
-  padding: 0 12px;
-}
-
-.menu li:hover {
-  background-color: aquamarine;
+.videomenubar li:hover {
+  background-color: lightgray;
   border-radius: 4px;
 }
 
-.snsicon {
+.channel {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+
+  border-bottom: whitesmoke solid 1px;
+}
+
+.imgName {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.channelImg {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  border-radius: 100px;
+  background-image: url(./img.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: 5px;
+}
+
+.channelName {
+  display: flex;
+  flex-direction: column;
+}
+
+.channelName div {
+  font-size: 0.5rem;
+  color: dimgray;
+}
+
+.nextvideo {
+  display: flex;
+  flex-direction: column;
+  padding: 4px 12px;
   padding-right: 30px;
 }
 
-.snsicon li {
-  padding: 0 8px;
-  font-size: 1.2rem;
+.nextvideoText {
+  color: dimgray;
+  margin-bottom: 4px;
 }
 
-.menubar {
-  display: none;
+.videos li {
+  display: flex;
+  margin-bottom: 10px;
+  align-items: flex-start;
+}
+.videos span {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 5px;
 }
 
-@media screen and (max-width: 840px) {
-  .nav {
-    flex-direction: column;
-    align-content: center;
-  }
+.firstVideoImg {
+  width: 168px;
+  height: 94px;
+  background-image: url(./hqdefault.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
 
-  .logo {
-    align-self: flex-start;
-  }
+.secondVideoImg {
+  display: inline-block;
+  width: 168px;
+  height: 94px;
+  background-image: url(./22.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
 
-  .logo h1 {
-    margin: 0;
-  }
+.ThirdVideoImg {
+  display: block;
+  width: 168px;
+  height: 94px;
+  background-image: url(./33.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
 
-  .menubar {
-    display: block;
-    position: absolute;
-    top: 15px;
-    right: 24px;
-  }
+.NextVideoTitle {
+  font-size: 0.8rem;
+}
 
-  .menu {
-    display: none;
-    flex-direction: column;
+.NextVideoChannel {
+  font-size: 0.7rem;
+  color: grey;
+}
+
+.NextVideoview {
+  font-size: 0.5rem;
+  color: grey;
+}
+
+.NextVideoMenu {
+  position: relative;
+  top: 10px;
+  left: 10px;
+  font-size: 0.5rem;
+  color: grey;
+}
+
+@media screen and (min-width: 780px) {
+  .video iframe {
     width: 100%;
-    margin: 10px;
+    height: 70vh;
   }
 
-  .menu li {
-    width: 100%;
-    padding: 6px;
-    text-align: center;
-  }
-
-  .snsicon {
-    display: none;
-    padding: 0;
-    justify-content: center;
-    width: 100%;
-  }
-
-  .menu.active,
-  .snsicon.active {
+  .blind {
     display: flex;
+    padding: 10px 20px;
   }
 }
