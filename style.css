@@ -1,0 +1,239 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 1rem;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  background-color: #0f0f00;
+}
+
+.navbar a {
+  color: whitesmoke;
+}
+
+.navbar h1 {
+  font-size: 1.2rem;
+  color: whitesmoke;
+  font-weight: 600;
+}
+
+.logo i {
+  color: red;
+}
+
+.navmenu {
+  display: flex;
+}
+
+.navmenu li {
+  margin-right: 5px;
+}
+
+.about {
+  padding: 4px 12px;
+}
+
+.titles {
+  margin-bottom: 5px;
+}
+
+.tags {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.tags li {
+  margin-right: 3px;
+}
+
+.tags a {
+  color: steelblue;
+}
+
+.title {
+  font-size: 1.1rem;
+  margin-bottom: 3px;
+}
+
+.view {
+  font-size: 0.5rem;
+  color: gray;
+}
+
+.video iframe {
+  box-sizing: content-box;
+  width: 100%;
+  height: 30vh;
+}
+.videomenubar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 6vh;
+  border-bottom: whitesmoke solid 1px;
+  margin-bottom: 6px;
+}
+
+.videomenubar li {
+  display: flex;
+  color: dimgray;
+  flex-direction: column;
+  flex-basis: 20%;
+  height: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.videomenubar li:hover {
+  background-color: lightgray;
+  border-radius: 4px;
+}
+
+.channel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+
+  border-bottom: whitesmoke solid 1px;
+}
+
+.imgName {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.channelImg {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  border-radius: 100px;
+  background-image: url(./img.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: 5px;
+}
+
+.channelName {
+  display: flex;
+  flex-direction: column;
+}
+
+.channelName div {
+  font-size: 0.5rem;
+  color: dimgray;
+}
+
+.nextvideo {
+  display: flex;
+  flex-direction: column;
+  padding: 4px 12px;
+  padding-right: 30px;
+}
+
+.nextvideoText {
+  color: dimgray;
+  margin-bottom: 4px;
+}
+
+.videos li {
+  display: flex;
+  margin-bottom: 10px;
+  align-items: flex-start;
+}
+.videos span {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 5px;
+}
+
+.firstVideoImg {
+  width: 168px;
+  height: 94px;
+  background-image: url(./hqdefault.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.secondVideoImg {
+  display: inline-block;
+  width: 168px;
+  height: 94px;
+  background-image: url(./22.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.ThirdVideoImg {
+  display: block;
+  width: 168px;
+  height: 94px;
+  background-image: url(./33.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.NextVideoTitle {
+  font-size: 0.8rem;
+}
+
+.NextVideoChannel {
+  font-size: 0.7rem;
+  color: grey;
+}
+
+.NextVideoview {
+  font-size: 0.5rem;
+  color: grey;
+}
+
+.NextVideoMenu {
+  position: relative;
+  top: 10px;
+  left: 10px;
+  font-size: 0.5rem;
+  color: grey;
+}
+
+@media screen and (min-width: 780px) {
+  .video iframe {
+    width: 100%;
+    height: 70vh;
+  }
+
+  .blind {
+    display: flex;
+    padding: 10px 20px;
+  }
+}
